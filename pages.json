@@ -1,4 +1,17 @@
 {
+	"subPackages": [
+		{
+			"root": "subpkg",
+			"pages": [
+				{
+					"path": "goods_detail/goods_detail"
+				},
+				{
+					"path": "goods_list/goods_list"
+				}
+			]
+		}
+	],
 	"pages": [
 		{
 			"path": "pages/home/home",
