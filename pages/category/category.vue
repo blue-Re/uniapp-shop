@@ -21,7 +21,12 @@
 					</view>
 					
 					<view class="cate-lv3-list">
-						<view class="cate-lv3-item" v-for="child in item.children" :key="child.cat_id">
+						<view
+							class="cate-lv3-item"
+							v-for="child in item.children"
+							:key="child.cat_id"
+							@click="goToPath(child.cat_id)"
+							>
 							<image :src="child.cat_icon" mode=""></image>
 							<text>{{child.cat_name}}</text>
 						</view>
@@ -58,6 +63,11 @@
 			activeChange(index) {
 				this.active = index
 				this.categorySecondList = this.categoryList[index].children
+			},
+			goToPath(id) {
+				uni.navigateTo({
+					url:`/subpkg/goods_list/goods_list?cid=${id}`
+				})
 			}
 		}
 	}
