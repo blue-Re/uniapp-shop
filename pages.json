@@ -8,6 +8,9 @@
 				},
 				{
 					"path": "goods_list/goods_list"
+				},
+				{
+					"path": "my-search/my-search"
 				}
 			]
 		}
