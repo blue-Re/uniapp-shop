@@ -40,6 +40,7 @@
 </template>
 
 <script>
+	import badgeMxin from '@/mixins/tabbar-badge.js';
 	export default {
 		data() {
 			return {
@@ -49,6 +50,7 @@
 				active: 0
 			};
 		},
+		mixins: [badgeMxin],
 		onLoad() {
 			const sysInfo = uni.getSystemInfoSync();
 			this.windowHeight = sysInfo.windowHeight - 50;

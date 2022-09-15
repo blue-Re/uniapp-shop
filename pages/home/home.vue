@@ -36,6 +36,7 @@
 </template>	
 
 <script>
+	import badgeMxin from '@/mixins/tabbar-badge.js';
 	export default {
 		data() {
 			return {
@@ -49,6 +50,7 @@
 			this.getNavList()
 			this.getFloorList()
 		},
+		mixins: [badgeMxin],
 		methods: {
 			async getSwiperList() {
 				const { data: { meta, message } = {} } = await uni.$http.get('/api/public/v1/home/swiperdata')

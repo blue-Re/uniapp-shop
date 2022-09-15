@@ -6,7 +6,7 @@
 				:key="item.goods_id"
 				@click="goToDetail(item.goods_id)"
 			>
-				<my-goods :item="item"></my-goods>
+				<my-goods :goods="item"></my-goods>
 			</view>
 		</view>
 	</view>
